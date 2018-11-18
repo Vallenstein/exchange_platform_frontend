@@ -1,81 +1,50 @@
-[![Build Status](https://travis-ci.org/akveo/ngx-admin.svg?branch=master)](https://travis-ci.org/akveo/ngx-admin)
-[![Join the chat at https://gitter.im/ng2-admin/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ng2-admin/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Dependency Status](https://david-dm.org/akveo/ngx-admin/status.svg)](https://david-dm.org/akveo/ng2-admin)
 
-[Who uses ngx-admin?](https://github.com/akveo/ngx-admin/issues/1645)
+ # Installation:
+For running the exchange platform you need three components.\
+The Backend database: https://github.com/Vallenstein/exchange_platform_database \
+GitLab as backend for learning content: https://about.gitlab.com/install/
+And as frontend this repository here.
 
-# Admin template based on Angular 6+, Bootstrap 4 and <a href="https://github.com/akveo/nebular">Nebular</a>
+For installation you will need the following (from nebular docu): \
+  Git - https://git-scm.com \
+  Node.js - https://nodejs.org. Please note the version should be >=8 \
+  Npm - Node.js package manager, comes with Node.js. Please make sure npm version is >=5 \
+  You might also need some specific native packages depending on your operating system like build-essential on Ubuntu
 
-### Three themes available:
+## GitLab installation
+Install GitLab and check if its running.
+Create two groups in GitLab: iLab_solutions and ilab_labs \
+Check on gitlabURL/api/v4/groups 
 
-| Corporate Theme |
-|:---------------:|
-|<a target="_blank" href="http://akveo.com/ngx-admin/#/pages/dashboard?theme=corporate&utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=themes"><img src="https://i.imgur.com/axbJYdN.png"/></a>|
+Create an account for the frontend with rights to view the lab group. *DO NOT* grant permission to the solutions group! \
+Create a token at GitLabURL/profile/personal_access_tokens with read access for the frontend account.
 
-| Cosmic Theme | Light Theme |
-|:------------:|:--------------:|
-|<a target="_blank" href="http://akveo.com/ngx-admin/#/pages/dashboard?theme=cosmic&utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=themes"><img src="https://i.imgur.com/FgRZcqL.png"/></a>|<a target="_blank" href="http://akveo.com/ngx-admin/#/pages/dashboard?theme=default&utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=themes"><img src="https://i.imgur.com/fozHlRJ.png"/></a>|
+Afterwards create an application for GitLab as OAuth provider with the root account.
+Do so at GitLabURL/profile/applications \
+This token is used in the app-module for the OAuth workflow.
 
-### What's included:
 
-- Angular 6+ & Typescript
-- Bootstrap 4+ & SCSS
-- Responsive layout
-- RTL support
-- High resolution
-- Flexibly configurable themes with **hot-reload** (2 themes included)
-- Authentication module with multiple providers
-- Lots of awesome features:
-  - Buttons
-  - Modals
-  - Popovers
-  - Icons
-  - Typography
-  - Animated searches
-  - Forms
-  - Tabs
-  - Notifications
-  - Tables
-  - Maps
-  - Charts
-  - Editors
-  
-And many more!
+## Database
+Follow the instructions in the repository. Also works if Spring API is run for example in Intellij for testing and developing purposes.
 
-### Hot Themes Reload
+## Frontend
+Clone this repository. Search for "//Change here" in the folder and change the data according to the steps for GitLab and your Spring API URL (See Database)
 
-<a target="_blank" href="http://akveo.com/ngx-admin/#/pages/dashboard?utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=demo"><img src="https://i.imgur.com/XoJtfvK.gif"/></a>
+If you just want to run the system go to the frontend folder and run with "npm start". This starts a webserver at localhost:4200 \
+If you want the system as webserver follow the steps on:
+https://akveo.github.io/nebular/docs/guides/server-deployment . This link also includes a link to angular documentation on how to deploy.
 
-### Demo
 
-<a target="_blank" href="http://akveo.com/ngx-admin/">Live Demo</a>
+# Components
+Parts of this project are build using nebular by akveo, see below.
+Additionally used is the ngx-admin template, starter Kit branch \
+For further development please refer to their documentation:
 
-## Documentation
+## Documentation Nebular
 This template is using [Nebular](https://github.com/akveo/nebular) modules set, [here you can find documentation and other useful articles](https://akveo.github.io/nebular/docs/installation/based-on-starter-kit-ngxadmin).
 
-### ng2-admin
-We will continue supporting [ng2-admin](https://github.com/akveo/ngx-admin/tree/ng2-admin) version, but if you are starting from scratch we recommend using `ngx-admin`. Unfortunately, there is no way to automatically update from ng2-admin to ngx-admin, but some parts (Nebular components) could be manually included.
+## Angular Demo
+Some other parts are build parallel to the angular demo by Google. The demo can be found at:
+https://angular.io/tutorial
 
-### Empty starter kit
-Don't need all the pages and modules and just looking for an empty starter kit for your next project? Check out our [starter-kit branch](https://github.com/akveo/ngx-admin/tree/starter-kit).
-
-### AngularJS 1.x version
-Here you can find AngularJS 1.x based version: [Blur Admin](http://akveo.github.io/blur-admin/)
-
-## BrowserStack
-This project runs its tests on multiple desktop and mobile browsers using [BrowserStack](http://www.browserstack.com).
-
-<img src="https://cloud.githubusercontent.com/assets/131406/22254249/534d889e-e254-11e6-8427-a759fb23b7bd.png" height="40" />
-
-### How can I support developers?
-- Star our GitHub repo :star:
-- Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
-- Follow us on [Twitter](https://twitter.com/akveo_inc) :feet:
-- Like our page on [Facebook](https://www.facebook.com/akveo/) :thumbsup:
-
-### Looking for engineering services? 
-Visit [our homepage](http://akveo.com/) or simply leave us a message to [contact@akveo.com](mailto:contact@akveo.com). We will be happy to work with you!
-
-### From Akveo
-Made with :heart: by [Akveo team](http://akveo.com/). Follow us on [Twitter](https://twitter.com/akveo_inc) to get the latest news first!
-We're always happy to receive your feedback!
+Both projects are under the MIT license!

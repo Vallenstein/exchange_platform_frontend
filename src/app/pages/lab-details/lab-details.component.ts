@@ -65,7 +65,7 @@ export class LabDetailsComponent implements OnInit {
       }
 
 
-  generate(): void {
+  generate(): void { //Change Here to Spring API URL
     axios.get('http://localhost:4201/api/v1/lab/' + this.lab.id + '/tokens?n=' + this.numbertokens)
       .then(function (response) {
         this.openDialog(response.data);

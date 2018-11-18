@@ -37,12 +37,12 @@ import { NbDialogModule } from '@nebular/theme'
       strategies: [
         NbOAuth2AuthStrategy.setup({
           name: 'gitlab',
-          clientId: 'cc36f0f0e5b368eb2181aae06dbb153f87dd38b57e457cf586cfd93b7005c75e',
+          clientId: 'cc36f0f0e5b368eb2181aae06dbb153f87dd38b57e457cf586cfd93b7005c75e', //Change here to GitLab OAuth ID
           clientSecret: '',
           authorize: {
-            endpoint: 'http://localhost:9080/oauth/authorize',
+            endpoint: 'http://localhost:9080/oauth/authorize', //Change here
             responseType: NbOAuth2ResponseType.TOKEN,
-            redirectUri: 'http://localhost:4200/auth/callback'
+            redirectUri: 'http://localhost:4200/auth/callback' //Change here to your frontend URL
           },
         }),
       ],

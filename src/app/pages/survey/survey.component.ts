@@ -53,6 +53,7 @@ export class SurveyComponent {
       rate: Number(this.quest5),
       comment: this.quest6,
     }
+    //Change Here to Spring API URL
     let token = this.route.snapshot.queryParams["token"];
     axios.post('http://localhost:4201/api/v1/result?token=' + token, answers)
       .then(function (response) {

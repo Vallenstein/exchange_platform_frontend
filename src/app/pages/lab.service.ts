@@ -13,7 +13,7 @@ const httpOptions = {
 
 export class LabService {
 
-
+//Change here
   private labsUrl = 'http://localhost:9080/api/v4/projects'  // URL to web api
 
   constructor(
@@ -21,7 +21,7 @@ export class LabService {
 
   /*Gets JSON from Gitlab*/
   getLabs(): Observable<Lab[]> {
-    return this.http.get<Lab[]>(this.labsUrl + '?private_token=unvou3c3E_Vgb8QA9cfA')
+    return this.http.get<Lab[]>(this.labsUrl + '?private_token=unvou3c3E_Vgb8QA9cfA') //Change here
       .pipe(
         catchError(this.handleError('getLabs', []))
       );
@@ -29,7 +29,7 @@ export class LabService {
 
   /** GET lab by id. Will 404 if id not found */
   getLab(id: number): Observable<Lab> {
-    const url = `${this.labsUrl}/${id}` + '?private_token=unvou3c3E_Vgb8QA9cfA';
+    const url = `${this.labsUrl}/${id}` + '?private_token=unvou3c3E_Vgb8QA9cfA'; //Change here
     return this.http.get<Lab>(url).pipe(
       catchError(this.handleError<Lab>(`getLab id=${id}`))
     );
@@ -37,7 +37,7 @@ export class LabService {
 
   /** GET lab by id. Return `undefined` when id not found */
   getLabNo404<Data>(id: number): Observable<Lab> {
-    const url = `${this.labsUrl}/?id=${id}` + '?private_token=unvou3c3E_Vgb8QA9cfA';
+    const url = `${this.labsUrl}/?id=${id}` + '?private_token=unvou3c3E_Vgb8QA9cfA'; //Change here
     return this.http.get<Lab[]>(url)
       .pipe(
         map(labs => labs[0]), // returns a {0|1} element array
@@ -54,8 +54,8 @@ export class LabService {
     if (!term.trim()) {
       // if not search term, return empty lab array.
       return of([]);
-    }
-    return this.http.get<Lab[]>(`${this.labsUrl}/?name=${term}+ '?private_token=unvou3c3E_Vgb8QA9cfA'`).pipe(
+    } //Change here
+    return this.http.get<Lab[]>(`${this.labsUrl}/?name=${term}+ '?private_token=unvou3c3E_Vgb8QA9cfA'`).pipe( 
       catchError(this.handleError<Lab[]>('searchLabs', []))
     );
   }
