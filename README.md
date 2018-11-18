@@ -27,6 +27,9 @@ This token is used in the app-module for the OAuth workflow.
 ## Database
 Follow the instructions in the repository. Also works if Spring API is run for example in Intellij for testing and developing purposes.
 
+The Database already contains Endpoints for connection to the Labsystem.
+There is no direct integration given.
+
 ## Frontend
 Clone this repository. Search for "//Change here" in the folder and change the data according to the steps for GitLab and your Spring API URL (See Database)
 
@@ -34,6 +37,23 @@ If you just want to run the system go to the frontend folder and run with "npm s
 If you want the system as webserver follow the steps on:
 https://akveo.github.io/nebular/docs/guides/server-deployment . This link also includes a link to angular documentation on how to deploy.
 
+The System is now ready to use, or develop further.
+
+# Developments
+For further development choose your favourite IDE. I can recommend Visual Studio Code and IntelliJ. \
+### Where to start?
+First check if the system is running.
+If you want to use everything while developing run npm start for the frontend and start your Spring API.
+
+The frontend is divided in modules.
+Theme and Core are mostly untouched from ngx-admin.
+oauth is for the authentication workflow and pages basically contains most frontend information.\
+The folder structure is rather straight forward. For every page we have a folder containing a module for this page.
+The tour of heroes tutorial (below) should provide enough information to get you started on angular in general.
+
+Things that need work: Include information from the database (with Spring API) in the frontend. The API already includes endpoints. \
+Search function sometimes not properly working. Possibly because of use of "name" instead of "id" in GitLab Api. \
+If wanted, rework the theme serice, to listen to theme change and save theme change as cookie and load the according theme on open. Right now it always loads default.
 
 # Components
 Parts of this project are build using nebular by akveo, see below.
