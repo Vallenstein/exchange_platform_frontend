@@ -1,0 +1,119 @@
+<ng-container *ngIf="lab; then labContent; else Error404">
+</ng-container>
+
+
+<ng-template #labContent>
+  <div>
+    <div class="nav justify-content-end">
+      <button nbButton (click)="goBack()">go back</button>
+    </div>
+
+    <h2>{{lab.name}}</h2>
+
+
+    <nb-card>
+      <nb-card-body>
+        <div *ngIf="lab.description===null">
+          No describtion yet!
+          Feel free to enter one </div>
+        {{lab.description}}
+      </nb-card-body>
+      <nb-card-footer>
+        Click <a href="http://localhost:9080/ilab_labs/{{lab.name}}/edit" target="_blank"> here</a> to edit the describtion at General Project.
+      </nb-card-footer>
+    </nb-card>
+
+    <h2>Student Feedback</h2>
+
+  
+    <div class="row">
+      <div class="col-lg-4">
+        <nb-card>
+          <nb-card-header>General Information</nb-card-header>
+          <nb-card-body>
+            Students got an average of %<br>
+            It took an average x hours to complete the prelab <br>
+            and an average x hours for the lab.<br>
+            The lab got a rating of x/5<br><br><br>
+            The Feedback is gathered by Students at the end of each lab.
+            If you want to run the surey as well please see the FAQs
+          </nb-card-body>
+        </nb-card>
+      </div>
+      <div class="col-lg-4">
+        <nb-card>
+          <nb-card-header>Rating</nb-card-header>
+          <nb-card-body>
+            <ngx-chartjs-pie></ngx-chartjs-pie>
+          </nb-card-body>
+        </nb-card>
+      </div>
+      <div class="col-lg-4">
+        <nb-card>
+          <nb-card-header>Interesting and Difficulty</nb-card-header>
+          <nb-card-body>
+            <interesting-chart></interesting-chart>
+          </nb-card-body>
+        </nb-card>
+      </div>
+      <div class="col-lg-4">
+        <nb-card>
+          <nb-card-header>Time spent on Pre- Lab</nb-card-header>
+          <nb-card-body>
+            <ngx-chartjs-bar-horizontal></ngx-chartjs-bar-horizontal>
+          </nb-card-body>
+        </nb-card>
+      </div>
+      <div class="col-lg-8">
+        <nb-card>
+          <nb-card-header>Comments on the lab</nb-card-header>
+          <nb-card-body>
+            Infinit List hier für die Comments
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <nb-card>
+      <nb-card-header>
+        Download this module
+      </nb-card-header>
+      <nb-card-body>
+        You can get this module by importing it into your labsystem. The Link is:
+        <p>
+          http://exchange.com:9080/ilab_labs/{{lab.name}}.git {{ token||json }}
+        </p>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card>
+      <nb-card-header>
+        Generate Survey Tokens
+      </nb-card-header>
+      <nb-card-body>
+        Please enter a number to generate a number of tokens:
+        <p>
+          <input type="number" nbInput placeholder="Number" [(ngModel)]="numbertokens">
+          <button (click)="generate()" nbButton> Submit </button>
+        </p>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</ng-template>
+
+<ng-template #Error404>
+  <div class="row justify-content-md-center">
+    <nb-card accent="danger" small>
+      <nb-card-header>
+        Error 404!
+      </nb-card-header>
+      <h4>The Lab you are looking for does not exist. <br>
+        If it should be, please message your administrator.
+      </h4>
+    </nb-card>
+  </div>
+</ng-template>
+
+<div class="nav justify-content-end">
+  <button nbButton (click)="goBack()">go back</button>
+</div>

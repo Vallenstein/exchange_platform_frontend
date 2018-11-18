@@ -1,0 +1,117 @@
+<h3> To always improve our labs we depend on your feedback.</h3>
+<h5>
+  Feel free to submit your thoughts below and help develop our materials. Your data is anonymized and handled
+  appropriately.
+</h5>
+
+<nb-card>
+  <nb-card-header>
+    <h5>How difficult was the exercise for you? (1 easy, 5 hard)</h5>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" [(ngModel)]="quest1">
+      <label class="form-check-label" for="inlineRadio11">1</label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" [(ngModel)]="quest1">
+      <label class="form-check-label" for="inlineRadio12">2</label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" [(ngModel)]="quest1">
+      <label class="form-check-label" for="inlineRadio13">3 </label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4" [(ngModel)]="quest1">
+      <label class="form-check-label" for="inlineRadio14">4</label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5" [(ngModel)]="quest1">
+      <label class="form-check-label" for="inlineRadio15">5</label>
+    </div>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    <h5>How interesting was the exercise for you? (1 interesting, 5 boring)</h5>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="1" [(ngModel)]="quest2">
+      <label class="form-check-label" for="inlineRadio1">1</label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="2" [(ngModel)]="quest2">
+      <label class="form-check-label" for="inlineRadio2">2</label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="3" [(ngModel)]="quest2">
+      <label class="form-check-label" for="inlineRadio3">3 </label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="4" [(ngModel)]="quest2">
+      <label class="form-check-label" for="inlineRadio3">4</label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="5" [(ngModel)]="quest2">
+      <label class="form-check-label" for="inlineRadio3">5</label>
+    </div>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    <h5>How much time did you spend in the prelab (roughly)?</h5>
+  </nb-card-header>
+  <nb-card-body>
+    <input type="number" nbInput fieldSize="small" placeholder="hours" [(ngModel)]="quest3">
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    <h5>How much time did you spend in the lab (roughly)?</h5>
+  </nb-card-header>
+  <nb-card-body>
+    <input type="number" nbInput fieldSize="small" placeholder="hours" [(ngModel)]="quest4">
+  </nb-card-body>
+</nb-card>
+<nb-card>
+  <nb-card-header>
+    <h5>How would you overall rate the lab? (1 good, 5 bad)</h5>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1" [(ngModel)]="quest5">
+      <label class="form-check-label" for="inlineRadio1">1</label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" [(ngModel)]="quest5">
+      <label class="form-check-label" for="inlineRadio2">2</label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3" [(ngModel)]="quest5">
+      <label class="form-check-label" for="inlineRadio3">3 </label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option4" [(ngModel)]="quest5">
+      <label class="form-check-label" for="inlineRadio3">4</label>
+    </div>
+    <div class="form-check form-check-inline form-control-lg">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio5" value="option5" [(ngModel)]="quest5">
+      <label class="form-check-label" for="inlineRadio3">5</label>
+    </div>
+  </nb-card-body>
+</nb-card>
+<nb-card>
+  <nb-card-header>
+    <h5>If you have any additional comments about the lab:</h5>
+  </nb-card-header>
+  <nb-card-body>
+    <input type="text" nbInput fullWidth fieldSize="large" placeholder="Comments about the lab">
+  </nb-card-body>
+</nb-card>
+<button (click)="submit()" size="large" nbButton value="Submit" > Submit </button>
+<br>
+Note: The link you were given is one-time-use only, so without an appropriate link a survey submit will not be saved in the Database!

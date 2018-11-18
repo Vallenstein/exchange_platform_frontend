@@ -1,0 +1,84 @@
+<nb-card size="medium">
+  <nb-card-header>
+    <h3> Over <span countUp endVal="312">0</span> Students have already spent over <span countUp [endVal]="27684">0</span>
+      hours with our content.</h3>
+    <h3> Become a part of this great learning experience.</h3>
+  </nb-card-header>
+  <nb-card-body>
+    <nb-stepper orientation="vertical">
+      <nb-step label="What?">
+        <h3>Welcome to iLab Exchange</h3>
+        <p class="lorem">
+          This is the exchange platform for the iLab courses. A consolidation of award winning courses. 
+        </p>
+        <p class="lorem">
+          Curabitur luctus mattis risus nec condimentum. Donec at dui turpis. Sed vehicula fringilla rutrum. Nullam
+          sed ornare magna. Mauris vitae laoreet diam. Mauris fermentum ligula at lacinia semper. Nulla placerat dui
+          eu sapien pellentesque, eu placerat leo luctus. Cras pharetra blandit fermentum.
+        </p>
+        <button nbButton disabled nbStepperNext>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Why?">
+        <h3>Our Goals with this service</h3>
+        <p class="lorem">
+          This platform provides an exchange platform for all univiersities using the iLab courses.
+          With this service we support the exchange of ideas of all univiersities taking part.
+          We also ensure quality, by giving the option of student feedback.
+          This page includes a survey which each student can fill out after a module.
+          This way instructors can see how well their materials come accross.
+          See the FAQs for how to use the survey.
+        </p>
+        <p class="lorem">
+          We also track anonymized data of how long labs take and what the average points are.
+          This provides an overview of the dfficulty and time effort for students.
+        </p>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Who?">
+        <h3>Which univiersities take part?</h3>
+        <p class="lorem">
+          Currently, three univiersities are using the iLab Courses.
+          The University in Thübingen, Technical University Munich and the University Sydney.
+          We are always open for new members for the iLabs!
+          Feel free to contact us at the contact details provided at the iLab page.
+        </p>
+        <p class="lorem">
+          Curabitur luctus mattis risus nec condimentum. Donec at dui turpis. Sed vehicula fringilla rutrum. Nullam
+          sed ornare magna. Mauris vitae laoreet diam. Mauris fermentum ligula at lacinia semper. Nulla placerat dui
+          eu sapien pellentesque, eu placerat leo luctus. Cras pharetra blandit fermentum.
+        </p>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="How?">
+        <h3>How can we take part?</h3>
+        <p class="lorem">
+            The the eLearning platform on which the courses are held, as well as this exchange platform are open source.
+            The courses on the other hand are copyrighted by the according instructors.
+            Again, feel free to contact us, we are open for sharing!
+        </p>
+        <p class="lorem">
+            And who? Every University interested! If you want your university to take part, feel free to contact us at the site below.
+        </p>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton disabled nbStepperNext>next</button>
+      </nb-step>
+    </nb-stepper>
+  </nb-card-body>
+  <nb-card-footer>
+    For more information on the iLab courses visit <a href="http://labsystem.m-o-p.de">us here</a>
+  </nb-card-footer>
+</nb-card>
+
+
+<nb-card>
+  <nb-card-header><h5>iLab Users over the last years</h5></nb-card-header>
+  <nb-card-body>
+    <ngx-chartjs-line></ngx-chartjs-line>
+  </nb-card-body>
+  <nb-card-footer>
+    Click on a label to (dis)able the curve.
+  </nb-card-footer>
+</nb-card>

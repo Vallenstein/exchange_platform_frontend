@@ -1,0 +1,13 @@
+<div id="search-component">
+    <h4>Lab Search</h4>
+   
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+   
+    <ul class="search-result">
+      <li *ngFor="let lab of labs$ | async" >
+        <a routerLink="/lab/{{lab.id}}">
+          {{lab.name}}
+        </a>
+      </li>
+    </ul>
+  </div>

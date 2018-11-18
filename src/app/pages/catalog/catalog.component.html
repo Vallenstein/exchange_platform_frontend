@@ -1,0 +1,31 @@
+<div class="col-11" id="search-component">
+  <app-lab-search></app-lab-search>
+<div class="col-1"></div>
+
+
+
+<div class="row">
+  <nb-card [size]="'xs'" *ngFor="let lab of labs" routerLink="/lab/{{lab.id}}">
+    <nb-card-header> {{lab.name}} </nb-card-header>
+    <nb-card-body>
+        <div *ngIf="lab.description===null">
+            No describtion yet!
+            If you have the according rights visit this page and enter one!</div>
+          {{lab.description}}
+    </nb-card-body>
+    <nb-card-footer>
+      <div class="row">
+        <div class="col-4">
+          This lab has an overall rating of:
+          <nb-progress-bar [value]="60" [displayValue]="true"> percent</nb-progress-bar>
+        </div>
+        <div class="col-4">
+          Students needed x hours on average.
+        </div>
+        <div class="col-4">
+          Students got x points on average.
+        </div>
+      </div>
+    </nb-card-footer>
+  </nb-card>
+</div>
