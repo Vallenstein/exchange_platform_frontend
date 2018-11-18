@@ -2,7 +2,7 @@
  # Installation:
 For running the exchange platform you need three components.\
 The Backend database: https://github.com/Vallenstein/exchange_platform_database \
-GitLab as backend for learning content: https://about.gitlab.com/install/
+GitLab as backend for learning content: https://about.gitlab.com/install/ \
 And as frontend this repository here.
 
 For installation you will need the following (from nebular docu): \
